@@ -1,0 +1,233 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawsome/css/all.min.css' %}">
+    <title>My Kids - Create</title>
+    <style>
+        .font {
+            font-family: 'Balsamiq Sans', cursive;
+        }
+        .navbar {
+            background-color: #FFEB94;
+        }
+        #form {
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: #FFEB94;
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body class="font">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">MY KIDS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Buat Akta</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+
+    <!-- FORM -->
+      <section id="form">
+          <div class="container">
+              <div class="row justify-content-center">
+
+                  <div class="col-md-10">
+                    <h1 class="text-center">Form Pembuatan Akta Kelahiran</h1> <br>
+
+                    <form>
+
+                        <H3>Data Anak</H3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Anak</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">NIK Anak</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nomor KK</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Jenis Kelamin</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Tempat Lahir</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Tanggal Lahir</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div> <br> <br>
+
+                        <h3>Data Ayah</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Ayah</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">NIK Ayah</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div> <br><br>
+
+                        <h3>Data Ibu</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Ibu</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">NIK Ibu</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div> <br><br>
+
+                        <h3>Data Saksi</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Saksi</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">NIK Saksi</label>
+                                    <input type="text" class="form-control">
+                                  </div>
+                            </div>
+                        </div> <br><br>
+
+                        <h3>Dokumen</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Surat Bukti Kelahiran</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Surat Pengantar Kelahiran</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Akta Nikah</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Kartu Keluarga</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">KTP Ayah</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">KTP Ibu</label>
+                                    <input type="file" class="form-control">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">KTP Saksi</label>
+                            <input type="file" class="form-control">
+                        </div> <br>
+
+
+                        <button type="submit" class="btn">Kirim</button>
+
+                    </form>
+
+                  </div>
+
+              </div>
+          </div>
+      </section> <br>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+  <!-- BAYI
+  NIK BAYI, NAMA BAYI, NO KK, JENIS KELAMIN, TEMPAT, LAHIR TANGAL LAHIR
+
+  AYAH
+  NAMA NIK
+
+  IBU
+  NAMA NIK
+
+  SAKSI 1
+  NAMA NIK
+
+  DOKUMEN
+  SURAT BUKTI KELAHIRAN, SURAT PENGANTAR KELAHIRAN, AKTA NIKAH, KK, KTP ORTU, KTP SAKSI, -->
