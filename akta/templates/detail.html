@@ -14,47 +14,125 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'fontawsome/css/all.min.css' %}">
-    <title>My Kids - Detail Akta</title>
+
+    <title>My Kids - Detail</title>
     <style>
-        .font {
-            font-family: 'Balsamiq Sans', cursive;
-        }
-        .navbar {
-            background-color: #FFEB94;
-        }
-    </style>
+      .font {
+          font-family: 'Balsamiq Sans', cursive;
+      }
+      .navbar {
+          background-color: #FFEB94;
+      }
+      .btn {
+          background-color: #FFEB94;
+          width: 100%;
+      }
+      #akta {
+          margin-top: 20px;
+      }
+  </style>
   </head>
-  <body>
-    
+  <body class="font">
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="#">MY KIDS</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#tentang">Tentang Kami</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#kelebihan">Kelebihan</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'akta' %}">Akta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-              </li>
+      <div class="container">
+        <a class="navbar-brand" href="#">MY KIDS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'akta' %}">Akta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Detail</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- AKTA -->
+    <section id="akta">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+
+            <thead>
+              <th><h3>{{akta.nama_anak}}</h3></th>
+            </thead>
+
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Nomor Pendaftaran</th>
+                  <td>{{akta.slug}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Nama Anak</th>
+                  <td>{{akta.nama_anak}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">NIK Anak</th>
+                  <td>{{akta.nik_anak}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Nomor KK Anak</th>
+                  <td>{{akta.nomor_kk}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Agama</th>
+                  <td>{{akta.agama}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Anak Ke</th>
+                  <td>{{akta.anak_ke}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tempat Lahir</th>
+                  <td>{{akta.tempat_lahir}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tanggal Lahir</th>
+                  <td>{{akta.tgl_lahir}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Jam Lahir</th>
+                  <td>{{akta.jam}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tempat Kelahiran</th>
+                  <td>{{akta.tempat_lahir}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Penolong Kelahiran</th>
+                  <td>{{akta.penolong_kelahiran}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Berat Badan</th>
+                  <td>{{akta.berat_badan}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tinggi Badan</th>
+                  <td>{{akta.tinggi_badan}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Status</th>
+                  <td>{{akta.status}}</td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
         </div>
-      </nav>
+      </div>
+    </section>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

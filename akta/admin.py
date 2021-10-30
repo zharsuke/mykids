@@ -7,4 +7,4 @@ from . models import *
 
 @admin.register(Akta)
 class AktaAdmin(admin.ModelAdmin):
-    list_display = ('user', 'nama_anak')
+    list_display = ('user', 'nama_anak', 'status')
