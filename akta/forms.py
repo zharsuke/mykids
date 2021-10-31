@@ -15,9 +15,7 @@ class AktaForm(ModelForm):
             'nama_pelapor', 'no_kk_pelapor', 'nik_kepala_keluarga_pelapor', 'nik_pelapor', 'hubungan_keluarga',
 
             # DATA ANAK
-            'nama_anak', 'nik_anak', 'nomor_kk', 'anak_ke', 'tempat_lahir', 'tgl_lahir', 'jam', 
-            # 'berat_badan', 'tinggi_badan', 
-            'rumah_sakit', 'penolong_kelahiran', 'agama', 'jenis_kelamin', 'jenis_kelahiran', 
+            'nama_anak', 'nik_anak', 'nomor_kk', 'anak_ke', 'tempat_lahir', 'tgl_lahir', 'jam', 'berat_badan', 'tinggi_badan', 'rumah_sakit', 'penolong_kelahiran', 'agama', 'jenis_kelamin', 'jenis_kelahiran', 
 
             # DATA AYAH
             'nama_ayah', 'nik_ayah',
@@ -40,8 +38,8 @@ class AktaForm(ModelForm):
             'tempat_lahir' : forms.TextInput( attrs={'class':'form-control', 'placeholder':'Tempat Lahir'}),
             'tgl_lahir' : forms.TextInput( attrs={'class':'form-control', 'type':'date', 'placeholder':'Tanggal Lahir'}),
             'jam' : forms.TextInput( attrs={'class':'form-control', 'type':'time', 'placeholder':'00:00:00'}),
-            # 'berat_badan' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan kg', 'min':'1'}),
-            # 'tinggi_badan' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan cm', 'min':'1'}),
+            'berat_badan' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan kg', 'min':'1'}),
+            'tinggi_badan' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan cm', 'min':'1'}),
             'rumah_sakit' : forms.Select( attrs={'class':'form-control'}),
             'penolong_kelahiran' : forms.Select( attrs={'class':'form-control'}),
             'agama' : forms.Select( attrs={'class':'form-control'}),
