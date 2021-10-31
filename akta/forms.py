@@ -15,8 +15,9 @@ class AktaForm(ModelForm):
             'nama_pelapor', 'no_kk_pelapor', 'nik_kepala_keluarga_pelapor', 'nik_pelapor', 'hubungan_keluarga',
 
             # DATA ANAK
+            'berat', 'tinggi',
             'nama_anak', 'nik_anak', 'nomor_kk', 'anak_ke', 'tempat_lahir', 'tgl_lahir', 'jam', 'rumah_sakit', 'penolong_kelahiran', 'agama', 'jenis_kelamin', 'jenis_kelahiran', 
-            # 'bb', 'tb', 
+            # 'bb', 'tb',
 
             # DATA AYAH
             'nama_ayah', 'nik_ayah',
@@ -41,6 +42,8 @@ class AktaForm(ModelForm):
             'jam' : forms.TextInput( attrs={'class':'form-control', 'type':'time', 'placeholder':'00:00:00'}),
             # 'bb' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan kg', 'min':'1'}),
             # 'tb' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan cm', 'min':'1'}),
+            'berat' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan kg', 'min':'1'}),
+            'tinggi' : forms.TextInput( attrs={'class':'form-control', 'type':'number', 'placeholder':'Satuan cm', 'min':'1'}),
             'rumah_sakit' : forms.Select( attrs={'class':'form-control'}),
             'penolong_kelahiran' : forms.Select( attrs={'class':'form-control'}),
             'agama' : forms.Select( attrs={'class':'form-control'}),

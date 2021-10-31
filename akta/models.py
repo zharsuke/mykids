@@ -36,6 +36,8 @@ class Akta(models.Model):
     jam = models.TimeField(max_length=250, null=True, blank=True)
     # bb = models.BigIntegerField(null=True, blank=True)
     # tb = models.BigIntegerField(null=True, blank=True)
+    berat = models.BigIntegerField(null=True)
+    tinggi = models.BigIntegerField(null=True)
     rumahsakit = (
         ('Rumah Sakit/Bersalin', 'Rumah Sakit/Bersalin'),
         ('Puskesmas', 'Puskesmas'),
