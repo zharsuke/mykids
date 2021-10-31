@@ -12,7 +12,7 @@ def buat(request):
     form = AktaForm(request.POST, files=request.FILES)
 
     context = {'form' : form
-    }
+}
     if request.method == 'POST':
         if form.is_valid():
             pass

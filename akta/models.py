@@ -32,10 +32,10 @@ class Akta(models.Model):
     nomor_kk = models.CharField(max_length=250, null=True, blank=True)
     anak_ke = models.BigIntegerField(null=True, blank=True)
     tempat_lahir = models.CharField(max_length=250, null=True, blank=True)
-    tgl_lahir = models.DateField(null=True, blank=True)
-    jam = models.TimeField(null=True, blank=True)
-    berat_badan = models.BooleanField(null=True, blank=True)
-    tinggi_badan = models.BooleanField(null=True, blank=True)
+    tgl_lahir = models.DateField(max_length=250, null=True, blank=True)
+    jam = models.TimeField(max_length=250, null=True, blank=True)
+    berat_badan = models.CharField(max_length=250, null=True, blank=True)
+    tinggi_badan = models.CharField(max_length=250, null=True, blank=True)
     rumahsakit = (
         ('Rumah Sakit/Bersalin', 'Rumah Sakit/Bersalin'),
         ('Puskesmas', 'Puskesmas'),

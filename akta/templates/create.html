@@ -59,7 +59,8 @@
                   <div class="col-md-10">
                     <h1 class="text-center">Form Pembuatan Akta Kelahiran</h1> <br>
 
-                    <form>
+                    <form method="post">
+                      {% csrf_token %}
 
                       <h3>Data Pelapor</h3>
                         <div class="row">
