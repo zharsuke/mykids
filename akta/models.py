@@ -11,31 +11,31 @@ class Akta(models.Model):
     slug = models.SlugField(unique=True, blank=True, null=True)
 
     #Data Keluarga
-    no_kk = models.CharField(max_length=250, null=True, blank=True)
-    nik_kepala_keluarga = models.CharField(max_length=250, null=True, blank=True)
+    no_kk = models.CharField(max_length=250, null=True)
+    nik_kepala_keluarga = models.CharField(max_length=250, null=True)
 
     #Data Pelapor
-    nama_pelapor = models.CharField(max_length=250, null=True, blank=True)
-    no_kk_pelapor = models.CharField(max_length=250, null=True, blank=True)
-    nik_kepala_keluarga_pelapor = models.CharField(max_length=250, null=True, blank=True)
-    nik_pelapor = models.CharField(max_length=250, null=True, blank=True)
+    nama_pelapor = models.CharField(max_length=250, null=True)
+    no_kk_pelapor = models.CharField(max_length=250, null=True)
+    nik_kepala_keluarga_pelapor = models.CharField(max_length=250, null=True)
+    nik_pelapor = models.CharField(max_length=250, null=True)
     hubungan = (
         ('Ayah', 'Ayah'),
         ('Ibu', 'Ibu'),
         ('Lainnya', 'Lainnya'),
     )
-    hubungan_keluarga = models.CharField(max_length=250, null=True, choices=hubungan, blank=True)
+    hubungan_keluarga = models.CharField(max_length=250, null=True, choices=hubungan)
 
     #DATA ANAK
-    nama_anak = models.CharField(max_length=250, null=True, blank=True)
-    nik_anak = models.CharField(max_length=250, null=True, blank=True)
-    nomor_kk = models.CharField(max_length=250, null=True, blank=True)
-    anak_ke = models.BigIntegerField(null=True, blank=True)
-    tempat_lahir = models.CharField(max_length=250, null=True, blank=True)
-    tgl_lahir = models.DateField(max_length=250, null=True, blank=True)
-    jam = models.TimeField(max_length=250, null=True, blank=True)
-    # bb = models.BigIntegerField(null=True, blank=True)
-    # tb = models.BigIntegerField(null=True, blank=True)
+    nama_anak = models.CharField(max_length=250, null=True)
+    nik_anak = models.CharField(max_length=250, null=True)
+    nomor_kk = models.CharField(max_length=250, null=True)
+    anak_ke = models.BigIntegerField(null=True)
+    tempat_lahir = models.CharField(max_length=250, null=True)
+    tgl_lahir = models.DateField(max_length=250, null=True)
+    jam = models.TimeField(max_length=250, null=True)
+    # bb = models.BigIntegerField(null=True)
+    # tb = models.BigIntegerField(null=True)
     berat = models.BigIntegerField(null=True)
     tinggi = models.BigIntegerField(null=True)
     rumahsakit = (
@@ -45,13 +45,13 @@ class Akta(models.Model):
         ('Rumah', 'Rumah'),
         ('Lainnya', 'Lainnya'),
     )
-    rumah_sakit = models.CharField(max_length=250, null=True, choices=rumahsakit, blank=True)
+    rumah_sakit = models.CharField(max_length=250, null=True, choices=rumahsakit)
     penolong = (
         ('Dokter', 'Dokter'),
         ('Bidan/Perawat', 'Bidan/Perawat'),
         ('Lainnya', 'Lainnya'),
     )
-    penolong_kelahiran = models.CharField(max_length=250, null=True, choices=penolong, blank=True)
+    penolong_kelahiran = models.CharField(max_length=250, null=True, choices=penolong)
     agama_choices = (
         ('Islam', 'Islam'),
         ('Kristen', 'Kristen'),
@@ -60,12 +60,12 @@ class Akta(models.Model):
         ('Budha', 'Budha'),
         ('Konghucu', 'Konghucu'),
     )
-    agama = models.CharField(max_length=250, choices=agama_choices, null=True, blank=True)
+    agama = models.CharField(max_length=250, choices=agama_choices, null=True)
     jenis_kelamin_choices = (
         ('Laki - Laki', 'Laki - Laki'),
         ('Perempuan', 'Perempuan'),
     )
-    jenis_kelamin = models.CharField(max_length=255, choices=jenis_kelamin_choices, null=True, blank=True)
+    jenis_kelamin = models.CharField(max_length=255, choices=jenis_kelamin_choices, null=True)
     jenis = (
          ('Tunggal', 'Tunggal'),
          ('Kembar Dua', 'Kembar Dua'),
@@ -74,27 +74,27 @@ class Akta(models.Model):
          ('Kembar Banyak/Lainnya', 'Kembar Banyak/Lainnya'),
     )
 
-    jenis_kelahiran = models.CharField(max_length=250, null=True, choices=jenis, blank=True)
+    jenis_kelahiran = models.CharField(max_length=250, null=True, choices=jenis)
 
     #DATA AYAH
-    nama_ayah = models.CharField(max_length=250, null=True, blank=True)
-    nik_ayah = models.CharField(max_length=250, null=True, blank=True)
+    nama_ayah = models.CharField(max_length=250, null=True)
+    nik_ayah = models.CharField(max_length=250, null=True)
 
     # DATA IBU
-    nama_ibu = models.CharField(max_length=250, null=True, blank=True)
-    nik_ibu = models.CharField(max_length=250, null=True, blank=True)
+    nama_ibu = models.CharField(max_length=250, null=True)
+    nik_ibu = models.CharField(max_length=250, null=True)
 
     #DATA SAKSI
-    nama_saksi = models.CharField(max_length=250, null=True, blank=True)
-    nik_saksi = models.CharField(max_length=250, null=True, blank=True)
+    nama_saksi = models.CharField(max_length=250, null=True)
+    nik_saksi = models.CharField(max_length=250, null=True)
 
     #DOKUMEN
-    akta_nikah = CloudinaryField(null=True, blank=True)
-    surat_kelahiran = CloudinaryField(null=True, blank=True)
-    kk = CloudinaryField(null=True, blank=True)
-    ktp_ayah = CloudinaryField(null=True, blank=True)
-    ktp_ibu = CloudinaryField(null=True, blank=True)
-    ktp_saksi = CloudinaryField(null=True, blank=True)
+    akta_nikah = CloudinaryField(null=True)
+    surat_kelahiran = CloudinaryField(null=True)
+    kk = CloudinaryField(null=True)
+    ktp_ayah = CloudinaryField(null=True)
+    ktp_ibu = CloudinaryField(null=True)
+    ktp_saksi = CloudinaryField(null=True)
 
     status_choices = (
         ('data ditunggu', 'data ditunggu'),
