@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'fontawsome/css/all.min.css' %}">
-    <title>My Kids - Homepage</title> 
+    <title>My Kids - Cara Daftar</title> 
 
     <style>
         .font {
@@ -23,7 +23,7 @@
         .navbar {
             background-color: #FFEB94;
         }
-        #jumbotron {
+        #cara {
             background-color: #fff5c6;
             width: 100%;
             height: 100%;
@@ -60,7 +60,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                <a class="nav-link" aria-current="page" href="{% url 'index' %}">Beranda</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#tentang">Tentang Kami</a>
@@ -68,35 +68,44 @@
               <li class="nav-item">
                 <a class="nav-link" href="#kelebihan">Kelebihan</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'akta' %}">Akta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-              </li>
           </div>
         </div>
       </nav>
 
-      <!-- JUMBOTRON -->
-      <section id="jumbotron">
-          <div class="container">
-              <div class="row">
+      <!-- CARA -->
+      <section id="cara">
+        <div class="container">
+            <div class="row justify-content-center">
 
-                  <div class="col-md-6">
-                    <img src="{% static 'img/baby.svg' %}" style="height: 100%; width: 100%;" alt="">
-                  </div> 
+                <div class="col-md-6">
+              
+                  <h3 class="text-center">Cara Daftar</h3> <br>
 
-                  <div class="col-md-6 align-self-center">
-                    <h1>Selamat Datang {{request.user}}!</h1>
-                    <p>Buat akta kelahiran anak anda, di my kids.</p>
-                    <a class="btn" href="{% url 'buat' %}">Buat Akta</a> 
-                  </div>
+                    <p>Jika Anda Bingung Untuk Mendaftar Akun MyKids, Ikuti Langkah-Langkah Berikut :</p>
+                    <ul>
+                        <li>Masukkan Username</li>
+                        <li>Masukkan Email</li>
+                        <li>Masukkan Password</li>
+                    </ul>
+                    <p>Jika anda ingin membuat akta kelahiran tapi tidak tahu caranya, ikuti langkah-langkah berikut ini :</p>
+                    <ul>
+                        <li>Lengkapi semua persyaratan dokumen-dokumen yang dibutuhkan.</li>
+                        <li>Jika sudah dokumen sudah lengkap, isi formulir pembuatan akta kelahiran dengan benar</li>
+                        <li>Inputkan dokumen-dokumen yang dibutuhkan.</li>
+                        <li>Jika anda sudah mengisi semua formulir dengan benar, anda dapat mensubmit data anda.</li>
+                        <li>Data anda akan otomatis berstatus ' data ditunggu ' yang artinya anda harus menunggu admin mengecek data-data anda.</li>
+                        <li>Jika data anda diterima admin, maka status akan otomatis berubah menjadi ' data disetujui ' yang artinya daya telah diterima.</li>
+                        <li>Jika data telah diterima, anda dapat mencetak akta kelahiran anda di kantor setempat.</li>
+                        <li>Jika data anda ditolak admin, maka akan otomatis berstatus menjadi ' data rejected ' yang artinya data anda ditolak oleh admin, dan otomatis akan terhapus.</li>
+                        <li>Jika anda ingin membuat akta kelahiran lagi anda dapat mengikuti langkah-langkah diatas, dan pastikan data-data yang anda inputkan benar dan valid.</li>
+                    </ul>
 
-              </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L1440,32L1440,320L0,320Z"></path></svg>
-      </section> 
+                </div> 
+
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L1440,32L1440,320L0,320Z"></path></svg>
+    </section> 
 
       <!-- tentang -->
       <section id="tentang">
@@ -128,23 +137,23 @@
             <h3 class="text-center">Kelebihan</h3> <br>
             <div class="row">
 
-                <div class="col-md-4">
-                    <h1 class="text-center"><i class="fas fa-clock h1"></i></h1>
-                    <h5 class="text-center">Menghemat Waktu</h5>
-                    <p>Anda dapat menghemat waktu dan tidak membuang waktu ketika membuat akte kelahiran. kini membuat akte kelahiran jadi menyenangkan.</p>
-                  </div>
-    
-                  <div class="col-md-4">
-                    <h1 class="text-center"><i class="fas fa-shield-alt h1"></i></h1>
-                    <h5 class="text-center">Data Tersimpan Dengan Aman</h5>
-                    <p>Data yang anda inputkan dijamin sangat aman, pasti aman, harus aman. Membuat anda tidak khawatir atas kebocoran data-data pribadi anda maupun anak anda.</p>
-                  </div>
+              <div class="col-md-4">
+                <h1 class="text-center"><i class="fas fa-clock h1"></i></h1>
+                <h5 class="text-center">Menghemat Waktu</h5>
+                <p>Anda dapat menghemat waktu dan tidak membuang waktu ketika membuat akte kelahiran. kini membuat akte kelahiran jadi menyenangkan.</p>
+              </div>
 
-                  <div class="col-md-4">
-                    <h1 class="text-center"><i class="fas fa-check-circle h1"></i></h1>
-                    <h5 class="text-center">Mudah Di Akses</h5>
-                    <p>Memudahkan anda dalam membuat akte kelahiran bagi anak anda. Kini anda tidak perlu repot-repot keluar rumah untuk membuat akte kelahiran.</p>
-                  </div>
+              <div class="col-md-4">
+                <h1 class="text-center"><i class="fas fa-shield-alt h1"></i></h1>
+                <h5 class="text-center">Data Tersimpan Dengan Aman</h5>
+                <p>Data yang anda inputkan dijamin sangat aman, pasti aman, harus aman. Membuat anda tidak khawatir atas kebocoran data-data pribadi anda maupun anak anda.</p>
+              </div>
+
+              <div class="col-md-4">
+                <h1 class="text-center"><i class="fas fa-check-circle h1"></i></h1>
+                <h5 class="text-center">Mudah Di Akses</h5>
+                <p>Memudahkan anda dalam membuat akte kelahiran bagi anak anda. Kini anda tidak perlu repot-repot keluar rumah untuk membuat akte kelahiran.</p>
+              </div>
 
             </div>
           </div>
@@ -157,22 +166,22 @@
               <div class="row">
 
                 <div class="col-md-6">
-                    <h3 class="text-center">Info Layanan</h3>
-                    <ul class="text-center list">
-                      <li><a href="{% url 'visi' %}">Visi Misi</a></li>
-                      <li><a href="{% url 'syarat' %}">Syarat</a></li>
-                      <li> <a href="{% url 'cara' %}">Cara Daftar</a></li>
-                    </ul>
-                </div>
+                  <h3 class="text-center">Info Layanan</h3>
+                  <ul class="text-center list">
+                    <li><a href="{% url 'visi' %}">Visi Misi</a></li>
+                    <li><a href="{% url 'syarat' %}">Syarat</a></li>
+                    <li> <a href="{% url 'cara' %}">Cara Daftar</a></li>
+                  </ul>
+              </div>
 
-                <div class="col-md-4">
-                    <h3 class="text-center">Hubungi Kami</h3>
-                    <ul class="text-center list">
-                      <li><a href="mailto:alazharisqi@gmail.com">Email</a></li>
-                      <li><a href="https://www.instagram.com/zharsuke/">Instagram</a></li>
-                      <li><a href="http://wa.me/0895366608834">WhatsApp</a></li>
-                    </ul>
-                </div>
+              <div class="col-md-4">
+                  <h3 class="text-center">Hubungi Kami</h3>
+                  <ul class="text-center list">
+                    <li><a href="mailto:alazharisqi@gmail.com">Email</a></li>
+                    <li><a href="https://www.instagram.com/zharsuke/">Instagram</a></li>
+                    <li><a href="http://wa.me/0895366608834">WhatsApp</a></li>
+                  </ul>
+              </div>
 
               </div>
           </div>

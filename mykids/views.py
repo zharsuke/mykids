@@ -11,3 +11,12 @@ def index(request):
 @login_required(login_url='login')
 def homepage(request):
     return render(request, 'homepage.html')
+
+def visi(request):
+    return render(request, 'visi.html')
+
+def cara(request):
+    return render(request, 'cara.html')
+
+def syarat(request):
+    return render(request, 'syarat.html')

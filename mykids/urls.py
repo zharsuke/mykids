@@ -25,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('homepage/', views.homepage, name='homepage'),
+    path('visimisi/', views.visi, name='visi'),
+    path('syarat/', views.syarat, name='syarat'),
+    path('caradaftar/', views.cara, name='cara'),
     path('account/', include('account.urls')),
     path('akta/', include('akta.urls')),
 ]
